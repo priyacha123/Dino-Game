@@ -21,7 +21,6 @@ Try to beat your high score!
 
 # Controls
 
-- Jump : Press the Spacebar or tap the screen (for mobile devices).
 - Restart : After losing, press R to restart the game.
 
 # Happy Gaming! 🎮🦖
