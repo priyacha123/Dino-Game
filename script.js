@@ -60,3 +60,8 @@ document.addEventListener("keydown", function (e) {
         location.reload();
     }
 });
+
+// Mobile Tap Support
+document.addEventListener("touchstart", function () {
+    jump();
+});
