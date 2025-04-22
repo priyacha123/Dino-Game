@@ -61,7 +61,4 @@ document.addEventListener("keydown", function (e) {
     }
 });
 
-// Mobile Tap Support
-document.addEventListener("touchstart", function () {
-    jump();
-});
+
