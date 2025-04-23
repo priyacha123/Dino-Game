@@ -6,7 +6,7 @@ const gameOverMessage = document.getElementById("game-over-message");
 let score = 0;
 let gameRunning = true;
 
-// Make dino jump
+
 function jump() {
     if (!dino.classList.contains("jump")) {
         dino.classList.add("jump");
@@ -17,26 +17,26 @@ function jump() {
     }
 }
 
-// Start cactus animation after delay
+
 setTimeout(() => {
     cactus.style.visibility = "visible";
     cactus.style.animation = "moveCactus 1.5s linear infinite";
 }, 2000);
 
-// Collision check
+
 let checkGame = setInterval(() => {
     if (!gameRunning) return;
 
     let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-    // Collision detected
+   
     if (cactusLeft < 90 && cactusLeft > 40 && dinoBottom < 40) {
         gameOver();
     }
 }, 10);
 
-// Score update
+
 let scoreCounter = setInterval(() => {
     if (gameRunning) {
         score++;
@@ -44,7 +44,7 @@ let scoreCounter = setInterval(() => {
     }
 }, 200);
 
-// Game Over logic
+
 function gameOver() {
     gameRunning = false;
     cactus.style.animation = "none";
@@ -52,7 +52,7 @@ function gameOver() {
     gameOverMessage.style.display = "block";
 }
 
-// Restart on 'R'
+
 document.addEventListener("keydown", function (e) {
     if (e.key === " " || e.key === "ArrowUp") {
         jump();
